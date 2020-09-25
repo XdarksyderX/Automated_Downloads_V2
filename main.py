@@ -1,13 +1,14 @@
 import os
 import getpass
-import folder_system  
+import folder_system 
+import shutil
+import organizer 
 def main():
     
     USER = getpass.getuser()
     PATH = '/home/{}/Descargas'.format(USER)
-    os.chdir(PATH)
-    downloads_container = os.listdir()
     folder_system.create_folders(PATH)
+    organizer.organize(PATH, ['AUDIOVISUAL', 'TEXT', 'COMPRESSED_FOLDERS', 'CODE', 'OTHER'])
 
 
 

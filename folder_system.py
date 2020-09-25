@@ -8,6 +8,6 @@ def create_folders(path):
 
     for i in range(len(FOLDER_TYPES)):
         if not (FOLDER_TYPES[i] in path_container):
-            os.mkdir(path + '/{}'.format(FOLDER_TYPES[i]))
+            os.mkdir(path + '/{}/'.format(FOLDER_TYPES[i]))
 
     
